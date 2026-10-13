@@ -1,0 +1,115 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "source": [
+        "# Mengembalikan fungsi print bawaan Python jika sebelumnya sempat tertimpa\n",
+        "try:\n",
+        "    del print\n",
+        "except NameError:\n",
+        "    pass\n",
+        "\n",
+        "# Menggunakan List [ ] agar nilainya bisa diubah (mutable)\n",
+        "kendaraan = [\"McLaren\", \"mobil\", \"4000cc\", \"oren\", \"4roda\"]\n",
+        "\n",
+        "print(\"list awal:\")\n",
+        "print(kendaraan)\n",
+        "\n",
+        "# Menambahkan harga dan tipe kendaraan di belakang\n",
+        "kendaraan.append(\"25 milyar\")\n",
+        "kendaraan.append(\"788HS\")\n",
+        "\n",
+        "# Menambahkan merek kendaraan di indeks ke-2\n",
+        "kendaraan.insert(2, \"McLaren\")\n",
+        "\n",
+        "print(\"list kendaraan setelah di tambahkan:\")\n",
+        "print(kendaraan)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "MqZWLxfQGMUl",
+        "outputId": "62c8b725-7f6e-4fb0-967c-e9f4561abe0b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "list awal:\n",
+            "['McLaren', 'mobil', '4000cc', 'oren', '4roda']\n",
+            "list kendaraan setelah di tambahkan:\n",
+            "['McLaren', 'mobil', 'McLaren', '4000cc', 'oren', '4roda', '25 milyar', '788HS']\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(\"silakan pilih bangun datar\")\n",
+        "print(\"1 persegi\")\n",
+        "print(\"2 lingkaran\")\n",
+        "print(\"3 segitiga\")\n",
+        "\n",
+        "pilih_bangun_datar = int(input(\"pilih bangun datar:\"))\n",
+        "\n",
+        "match pilih_bangun_datar:\n",
+        " case 1:\n",
+        "  sisi = float(input(\"masukkan sisi: \"))\n",
+        "  luas = sisi * sisi\n",
+        "  print(\" luas persegi =\", luas)\n",
+        " case 2:\n",
+        "  jari = float(input(\"masukkan jari jari:\"))\n",
+        "  luas = 3.14 * jari ** 2\n",
+        "  print(\" luas lingkaran=\", luas)\n",
+        " case 3:\n",
+        "  alas = float(input(\"masukkan alas: \"))\n",
+        "  tinggi = float(input(\"masukkan tinggi:\"))\n",
+        "  luas = 0.5 * alas * tinggi\n",
+        "  print(\"luas segitiga =\", luas)\n",
+        " case _:\n",
+        "  print(\"Salah pilih\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "G06rAvORMHuN",
+        "outputId": "2e925f47-0643-4bc9-be61-6b0815639ef4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "metadata": {
+            "tags": null
+          },
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "silakan pilih bangun datar\n",
+            "1 persegi\n",
+            "2 lingkaran\n",
+            "3 segitiga\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
